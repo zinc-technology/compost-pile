@@ -1,0 +1,45 @@
+{
+  "ltex.en-US.disabledRules": [
+    "KEY_WORDS",
+    "PROFANITY",
+    "PUNCTUATION_PARAGRAPH_END"
+  ],
+  "ltex.ignoreRuleInSentence": [
+    {
+      "rule": "MORFOLOGIK_RULE_EN_US",
+      "sentence": "^\\QPeople subscribe to flush some of their ~~money~~ shit down the shithole every month.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QContributors must not commit directly to the \\EDummy[0-9]+\\Q or \\EDummy[0-9]+\\Q branches.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QContributors should ask for help when they get stuck.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QContributors may build on top of other Contributors un-merged branches.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QContributors may build on top of other Contributors unmerged branches.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QMaintainers must ensure that all feedback provided to Contributors is specific, actionable, and kind.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QMaintainers must not erase authorship information from any Contributors.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QMaintainers should acknowledge Contributors issues and patches within two weeks of submission.\\E$"
+    },
+    {
+      "rule": "ENGLISH_WORD_REPEAT_BEGINNING_RULE",
+      "sentence": "^\\QThe contributor can't revoke this license.\\E$"
+    }
+  ]
+}
