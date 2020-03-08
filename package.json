@@ -1,0 +1,27 @@
+{
+  "name": "shithole",
+  "version": "0.1.0",
+  "description": "Capital is shit. Dump it into the shithole.",
+  "main": "index.js",
+  "scripts": {
+    "test": "bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zinc-technology/shithole.git"
+  },
+  "keywords": [
+    "stripe",
+    "compensated",
+    "anticapitalism"
+  ],
+  "author": "Zinc Technology Inc",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/zinc-technology/shithole/issues"
+  },
+  "homepage": "https://github.com/zinc-technology/shithole#readme",
+  "devDependencies": {
+    "cucumber": "^6.0.5"
+  }
+}

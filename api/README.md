@@ -14,7 +14,9 @@ We recommend using [hivemind][hivemind] or [overmind] to run the API server from
 
 ### Running the tests
 
-[There are no tests at this time][you-will-be].
+Tests are ran by running `bin/test` from within the [Shithole project root][shithole-root].
+
+While [there are no rails/ruby specific tests at this time][you-will-be], there will be.
 
 ## License
 

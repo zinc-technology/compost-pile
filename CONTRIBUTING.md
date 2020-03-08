@@ -122,8 +122,8 @@ underlying mental models.
 [Review the dependencies that require manual installation][dependencies] and
 install them.
 
-You can then run `bin/setup` from the top-level directory or a module specific
-directory to install missing dependencies which can be automatically installed.
+Run `bin/setup`from the project root directory or from a module specific
+directory to install dependencies which can be automatically installed.
 
 If that doesn't work, read the source of `bin/setup` and the nearest README and
 try again to get it working. Failing that, [ask for help][get-help]
@@ -133,14 +133,14 @@ try again to get it working. Failing that, [ask for help][get-help]
 We encourage people to start off by writing a test that demonstrates the bug
 they are attempting to fix or the use case they want to add.
 
-Run tests with `bin/test` at the top-level directory or a project-specific
-folder.
+Run tests with `bin/test` from the project root directory or from a module
+specific directory.
 
 Ideally, there are at least two tests, a [“unit” test and a “system”
-test][unit-and-system-tests]. If you are struggling to write either test, that
-is OK! You can find examples of unit tests in the `spec/unit` folder and of
-system tests in the `spec/system` folder. If you are still stuck, you can always
-[ask for help][get-help].
+test][unit-and-system-tests]. If you are struggling to write tests, that is OK!
+You can find examples of unit tests in the `spec/unit` folder. Our system tests
+are written in cucumber and live in `features` folder. If you are still stuck,
+you can always [ask for help][get-help].
 
 Once you have a test that help you feel confident you will know that the change
 you made has the impact you want, dive on in to writing code! Reviewing the
