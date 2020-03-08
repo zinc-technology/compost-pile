@@ -10,17 +10,17 @@ See [Shithole's Development Guide][contributing-development].
 
 ### Running the API
 
-We recommend using [hivemind][hivemind] or [overmind] to run the API server from [Shithole project root][shithole-root]. This will ensure that the web frontend is also running.
+We recommend using [Hivemind][hivemind] or [Overmind] to run the API server from [Shithole project root][shithole-root]. This will ensure that the web frontend is also running.
 
 ### Running the tests
 
-Tests are ran by running `bin/test` from within the [Shithole project root][shithole-root].
+Run tests by executing `bin/test` from within the [Shithole project root][shithole-root].
 
 While [there are no rails/ruby specific tests at this time][you-will-be], there will be.
 
 ## License
 
-The Shitehole API is licensed under [the Prosperity Public License][license]
+The Shithole API is licensed under [the Prosperity Public License][license]
 
 
 
