@@ -1,0 +1,25 @@
+{
+  "name": "shithole",
+  "version": "0.1.0",
+  "description": "Capital is shit. Dump it into the shithole.",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss TailwindCss/tailwind.pcss -o assets/css/app.css"
+  },
+  "author": "Zinc Technology Inc",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/zinc-technology/shithole/issues"
+  },
+  "homepage": "https://github.com/zinc-technology/shithole#readme",
+  "devDependencies": {
+    "cucumber": "^6.0.5"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "autoprefixer": "^9.7.4",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
+  }
+}
