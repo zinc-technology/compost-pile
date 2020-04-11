@@ -2,7 +2,7 @@
 
 Contributor: Zinc Technology Inc
 
-Source Code: https://github.com/zinc-technology/shithole
+Source Code: https://github.com/zinc-technology/compost-pile
 
 ## Purpose
 

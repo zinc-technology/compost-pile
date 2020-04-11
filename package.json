@@ -1,14 +1,14 @@
 {
-  "name": "shithole",
+  "name": "compost-pile",
   "version": "0.1.0",
-  "description": "Capital is shit. Dump it into the shithole.",
+  "description": "Excess Capital is Waste. Compost it.",
   "main": "index.js",
   "scripts": {
     "test": "bin/test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zinc-technology/shithole.git"
+    "url": "git+https://github.com/zinc-technology/compost-pile.git"
   },
   "keywords": [
     "stripe",
@@ -18,9 +18,9 @@
   "author": "Zinc Technology Inc",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/zinc-technology/shithole/issues"
+    "url": "https://github.com/zinc-technology/compost-pile/issues"
   },
-  "homepage": "https://github.com/zinc-technology/shithole#readme",
+  "homepage": "https://github.com/zinc-technology/compost-pile#readme",
   "devDependencies": {
     "cucumber": "^6.0.5"
   }

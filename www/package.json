@@ -1,7 +1,7 @@
 {
-  "name": "shithole",
+  "name": "compost-pile-www",
   "version": "0.1.0",
-  "description": "Capital is shit. Dump it into the shithole.",
+  "description": "User interface for the Compost Pile service.",
   "main": "index.js",
   "scripts": {
     "build": "postcss TailwindCss/tailwind.pcss -o assets/css/app.css"
@@ -9,9 +9,9 @@
   "author": "Zinc Technology Inc",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/zinc-technology/shithole/issues"
+    "url": "https://github.com/zinc-technology/compost-pile/issues"
   },
-  "homepage": "https://github.com/zinc-technology/shithole#readme",
+  "homepage": "https://github.com/zinc-technology/compost-pile#readme",
   "devDependencies": {
     "cucumber": "^6.0.5"
   },
