@@ -48,10 +48,13 @@ Compost Pile depends on the following programs which must be installed manually:
 
 - PostgreSQL (We recommend [Postgres.app][postgres-app] for macOS)
 - Redis (We recommend [Homebrew to install Redis][homebrew-redis])
-- (we recommend using a language manager like [asdf][asdf], [rbenv][rbenv], or
-  [nodenv][nodenv])
-  - Ruby 2.7 (We recommend [rbenv][rbenv] or [asdf][asdf])
-  - Node 12.16 (We recommend [nodenv][nodenv] or [asdf][asdf])
+- (we recommend using a language manager like [asdf], [rbenv], or
+  [nodenv])
+  - Ruby 2.7 (We recommend [rbenv] or [asdf])
+  - Node 12.16 (We recommend [nodenv] or [asdf])
+
+If you are using [nodenv] and [rbenv], run `bin/setup` to install the
+appropriate Ruby and Node languages and libraries.
 
 [postgres-app]: https://postgresapp.com/
 [homebrew-redis]: https://formulae.brew.sh/formula/redis

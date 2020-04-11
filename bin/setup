@@ -2,4 +2,14 @@
 
 set -e -o pipefail
 
+
+if command -v rbenv; then
+  rbenv install -s 2.7.0
+fi;
 (cd api && bin/setup)
+
+if command -v nodenv; then
+  nodenv install -s 12.14.0
+fi;
+npm i
+(cd www && bin/setup)
