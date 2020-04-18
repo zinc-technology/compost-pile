@@ -4,7 +4,8 @@
   "description": "User interface for the Compost Pile service.",
   "main": "index.js",
   "scripts": {
-    "build": "postcss TailwindCss/tailwind.pcss -o assets/css/app.css"
+    "build": "postcss TailwindCss/tailwind.pcss -o assets/css/app.css",
+    "dev": "eleventy --serve"
   },
   "author": "Zinc Technology Inc",
   "license": "SEE LICENSE IN LICENSE.md",
