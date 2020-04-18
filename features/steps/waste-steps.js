@@ -1,10 +1,18 @@
-const { When, Then } = require('cucumber')
-When('they submit the give waste capital widget for $10 with valid payment information', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+const { Given, When, Then } = require('cucumber')
+const { By } = require('selenium-webdriver');
+
+const assert = require('assert')
+Given('a waste composting balance of ${int}', async function (dollars) {
+  this.compostPile = await this.api.createCompostPile({ compostingCents: dollars * 100 })
 });
 
-Then('the waste composting increases by $10', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+When('they submit the deposit waste capital widget with:', function (dataTable) {
+  return Promise.all(dataTable.hashes().map(({ field, value }) =>
+    this.browser.findElement(By.name(field)).sendKeys(value)
+  )).then(() => this.browser.findElement(By.name('commit')).click())
+});
+
+Then('the waste composting balance is ${int}', async function (amount) {
+  const response = await this.api.getCompostPile(this.compostPile)
+  assert.equal(amount * 100, response.data.composting_cents)
 });

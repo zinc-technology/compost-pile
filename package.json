@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/zinc-technology/compost-pile#readme",
   "devDependencies": {
+    "axios": "^0.19.2",
     "cucumber": "^6.0.5",
-    "jsdoc": "^3.6.4"
+    "jsdoc": "^3.6.4",
+    "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
