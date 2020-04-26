@@ -1,0 +1,7 @@
+AllCops:
+  Exclude:
+    - 'api/db/schema.rb'
+    - 'api/bin/*'
+
+Layout/LineLength:
+  Max: 120
