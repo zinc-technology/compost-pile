@@ -4,7 +4,7 @@
   "description": "Excess Capital is Waste. Compost it.",
   "main": "index.js",
   "scripts": {
-    "test": "bin/test"
+    "test": "cucumber-js"
   },
   "repository": {
     "type": "git",
