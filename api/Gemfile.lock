@@ -136,6 +136,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    yard (0.9.24)
     zeitwerk (2.3.0)
 
 PLATFORMS
@@ -148,6 +149,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
   tzinfo-data
+  yard
 
 RUBY VERSION
    ruby 2.7.0p0

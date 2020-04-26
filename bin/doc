@@ -2,3 +2,4 @@
 
 npm run doc
 (cd www && bin/doc)
+(cd api && bin/doc)
