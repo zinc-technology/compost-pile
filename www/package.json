@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "postcss TailwindCss/tailwind.pcss -o assets/css/app.css",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "doc": "jsdoc -c jsdoc.config.js -r"
   },
   "author": "Zinc Technology Inc",
   "license": "SEE LICENSE IN LICENSE.md",

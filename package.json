@@ -4,7 +4,8 @@
   "description": "Excess Capital is Waste. Compost it.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "doc": "jsdoc -c jsdoc.config.js -r"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/zinc-technology/compost-pile#readme",
   "devDependencies": {
-    "cucumber": "^6.0.5"
+    "cucumber": "^6.0.5",
+    "jsdoc": "^3.6.4"
   }
 }
