@@ -14,28 +14,12 @@ const cards = {
   }
 }
 
-const fillInStripeCheckoutForm = function(browser, card) {
-  return Promise.all([
-    browser.findElement(By.name('number')).sendKeys(card.number),
-    browser.findElement(By.name('cvc')).sendKeys(card.cvc),
-    browser.findElement(By.name('expiration_date')).sendKeys(card.expiration_date),
-  ])
-}
-
-const fillInDeposit = function(browser, deposit) {
-  return Promise.all([
-    browser.findElement(By.name('amount')).sendKeys(deposit.amount),
-    browser.findElement(By.name('email')).sendKeys(deposit.email)
-  ])
-}
-
 When('they submit the deposit waste capital widget with:', function (dataTable) {
   const deposit = dataTable.rowsHash();
   const card = cards[deposit.payment_information]
-  return fillInDeposit(this.browser, deposit)
-    .then(() => this.browser.findElement(By.name('sponsor')).click())
-    .then(() => fillInStripeCheckoutForm(this.browser, card))
-    .then(() => this.browser.findElement(By.name('buy')).click())
+  return this.browser.submitDeposit(deposit)
+    .then(this.browser.submitStripeCheckoutForm(card))
+
 });
 
 Then('the waste composting balance is ${int}', async function (amount) {

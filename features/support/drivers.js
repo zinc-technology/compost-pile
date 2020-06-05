@@ -1,6 +1,7 @@
 const { Before, After } = require("cucumber");
 const axios = require("axios").default;
-const { Builder } = require("selenium-webdriver");
+const { By, Builder } = require("selenium-webdriver");
+
 
 /* Encapsulates responsibility for interacting with the
  * API server for Node or Browser JavaScript clients.
@@ -31,7 +32,7 @@ class ApiClient {
     return this.axios
       .post("/compost_piles/", { compostPile })
       .then((response) => response.data)
-      .catch((reason) => console.error(reason.response.data));
+      .catch((reason) => console.error(reason));
   }
 
   /*
@@ -47,6 +48,37 @@ class ApiClient {
   }
 }
 
+class WebUIDriver {
+  constructor({ baseURL, browser }) {
+    this.browser = browser
+    this.baseURL = baseURL
+  }
+
+  visit(path) {
+    this.browser.get(`${this.baseURL}${path}`)
+  }
+
+  quit() {
+    this.browser.quit()
+  }
+
+  submitDeposit(deposit) {
+    return Promise.all([
+      this.browser.findElement(By.name('amount')).sendKeys(deposit.amount),
+      this.browser.findElement(By.name('email')).sendKeys(deposit.email)
+    ]).then(() => this.browser.findElement(By.name('sponsor')).click())
+  }
+
+  submitStripeCheckoutForm(card) {
+    return Promise.all([
+      this.browser.findElement(By.name('number')).sendKeys(card.number),
+      this.browser.findElement(By.name('cvc')).sendKeys(card.cvc),
+      this.browser.findElement(By.name('expiration_date')).sendKeys(card.expiration_date),
+    ])
+    .then(() => this.browser.findElement(By.name('buy')).click())
+  }
+
+}
 /*
  * Attaches `this.browser` and `this.api` to the
  * Cucumber World using Cucumber Before and After Hooks
@@ -54,8 +86,8 @@ class ApiClient {
  * @see {@link https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/world.md } Cucumber World Documentation
  */
 const buildAndAttachDrivers = async function () {
-  this.browser = await new Builder().forBrowser("firefox").build();
-  this.api = new ApiClient({ baseURL: "http://localhost:3000/", timeout: 100 });
+  this.browser = new WebUIDriver({ baseURL: "http://localhost:8080/", browser: await new Builder().forBrowser("firefox").build() });
+  this.api = new ApiClient({ baseURL: "http://localhost:3000/", timeout: 200 });
 };
 
 /*
