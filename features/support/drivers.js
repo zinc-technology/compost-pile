@@ -28,7 +28,6 @@ class ApiClient {
    * @return {Promise<AxiosResponse<any>>}
    */
   createCompostPile(compostPile) {
-    this.axios.post();
     return this.axios
       .post("/compost_piles/", { compostPile })
       .then((response) => response.data)
@@ -42,8 +41,9 @@ class ApiClient {
    * @return {Promise<AxiosResponse<any>>}
    */
   getCompostPile({ id }) {
-    this.axios.get();
-    return this.axios.get(`/compost_piles/${id}`);
+    return this.axios.get(`/compost_piles/${id}`)
+      .then((response) => response.data)
+      .catch((reason) => console.error(reason.response.data));
   }
 }
 
@@ -55,7 +55,7 @@ class ApiClient {
  */
 const buildAndAttachDrivers = async function () {
   this.browser = await new Builder().forBrowser("firefox").build();
-  this.api = new ApiClient({ baseURL: "http://localhost:5000/", timeout: 100 });
+  this.api = new ApiClient({ baseURL: "http://localhost:3000/", timeout: 100 });
 };
 
 /*

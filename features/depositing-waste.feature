@@ -9,7 +9,6 @@ Feature: Depositing Waste
     Given a Guest Sponsor is on the home page
     And a waste composting balance of $50
     When they submit the deposit waste capital widget with:
-      | field               | value                     |
       | amount              | $10                       |
       | payment_information | valid                     |
       # We may not need this, as it could be in the
