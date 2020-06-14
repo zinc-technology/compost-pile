@@ -1,3 +1,4 @@
+@unreleased
 Feature: Depositing Waste
 
   In order to create fertilizer
@@ -11,9 +12,6 @@ Feature: Depositing Waste
     When they submit the deposit waste capital widget with:
       | amount              | $10                       |
       | payment_information | valid                     |
-      # We may not need this, as it could be in the
-      # Guest Sponsor that's part of the test context
-      | email               | guest-sponsor@example.com |
     Then the waste composting balance is $60
-    And they receive a receipt with refund instructions
+    And they receive an email receipt with refund instructions
 
